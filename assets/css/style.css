@@ -1,0 +1,8 @@
+:root {
+    /*Typographie*/
+    --primary-font: "Tenor Sans", serif;
+}
+
+.titre {
+    font-family: var(--primary-font);
+}
