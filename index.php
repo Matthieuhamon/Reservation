@@ -17,16 +17,13 @@
         <?php require 'header.php'; ?>
     </header>
 
-    <main class="flex-grow-1">
-        <form method="POST" action="traitement.php">
-        1er nombre : <input type="text" name="nombre1">
-        Opérateur : <input type="text" name="opérateur">
-        2ème nombre : <input type="text" name="nombre2">
-        <input type="submit" value="Envoyer">
-        </form>
+    <main class="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center" style="background-color: #f8f9fa;">
+        <h1 class="mb-3">Bienvenue sur notre système de réservation</h1>
+        <p class="mb-4">Réservez votre créneau en toute simplicité !</p>
+        <a href="reservation.php" class="btn btn-success btn-lg">Réserver maintenant</a>
     </main>
 
-    <footer class="bg-dark text-white text-center pt-4 pb-2" style="margin-top: 10vh;">
+    <footer class="bg-dark text-white text-center pt-4 pb-2">
         <?php require 'footer.php'; ?>
     </footer>
 </body>
