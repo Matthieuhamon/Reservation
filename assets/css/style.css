@@ -6,3 +6,9 @@
 .titre {
     font-family: var(--primary-font);
 }
+
+.btn-hover-custom:hover {
+    background-color: #ff5733 !important; /* Couleur personnalisée */
+    color: white !important;
+    border-color: #ff5733 !important;
+}

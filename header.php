@@ -4,7 +4,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto gap-4">
                 <li class="nav-item">
-                    <a class="btn btn-outline-success fs-5 me-2" href="index.php">S'inscrire</a>
+                    <a class="btn btn-outline-success btn-hover-custom fs-5 me-2" href="index.php">S'inscrire</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-outline-primary fs-5 me-5" href="reservation.html">Se connecter</a>
