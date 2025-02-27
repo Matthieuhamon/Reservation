@@ -12,7 +12,7 @@
     <div class="container">
         <div class="card shadow p-4" style="max-width: 600px; margin: auto;">
             <h2 class="text-center mb-4">Inscription</h2>
-            <form action="signup_process.php" method="POST">
+            <form action="traitement.php" method="POST">
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="nom" class="form-label">Nom :</label>
