@@ -60,10 +60,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: profil.php");
                 exit();
 
-                // // Envoi de l'email de vérification
-                // sendVerificationEmail($email, $token);
+                // Envoi de l'email de vérification
+                sendVerificationEmail($email, $token);
 
-                // echo "<p style='color:green;'>Un email de vérification vous a été envoyé. Veuillez vérifier votre boîte de réception.</p>";
+                echo "<p style='color:green;'>Un email de vérification vous a été envoyé. Veuillez vérifier votre boîte de réception.</p>";
             }
         }
     }
