@@ -20,7 +20,7 @@ function sendVerificationEmail($userEmail, $token) {
         $mail->Port = 587;
 
         // Destinataire
-        $mail->setFrom('bookin.time.verif@gmail.com', 'Matthieu');
+        $mail->setFrom('bookin.time.verif@gmail.com', 'BookinTime');
         $mail->addAddress($userEmail); // Email de l'utilisateur
 
         // Sujet
