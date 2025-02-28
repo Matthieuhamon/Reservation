@@ -1,4 +1,5 @@
 <?php require 'config.php'; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,7 +19,7 @@
                 <p class="text-danger text-center"><?php echo htmlspecialchars($_GET['error']); ?></p>
             <?php endif; ?>
 
-            <form action="login_process.php" method="POST">
+            <form action="traitement-c.php" method="POST">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email :</label>
                     <input type="email" class="form-control" name="email" required>
