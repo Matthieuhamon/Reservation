@@ -24,7 +24,7 @@
                             <a class="btn btn-outline-success rounded-pill fs-5 me-2" href="inscription.php">S'inscrire</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-outline-primary rounded-pill fs-5 me-5" href="connexion.html">Se connecter</a>
+                            <a class="btn btn-outline-primary rounded-pill fs-5 me-5" href="connexion.php">Se connecter</a>
                         </li>
                     </ul>
                 </div>

@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+require 'email.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = htmlspecialchars(trim($_POST['nom'])); 
@@ -25,9 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($check_email->rowCount() > 0) {
             echo "<p style='color:red;'>Erreur : Cet email est déjà utilisé !</p>";
         } else {
+
+            // // Générer un token unique pour la vérification
+            $token = bin2hex(random_bytes(50));
+
             // Préparation de la requête d'insertion
-            $sql = "INSERT INTO utilisateurs (nom, prenom, date_naissance, adresse, telephone, email, password) 
-                    VALUES (:nom, :prenom, :date_naissance, :adresse, :telephone, :email, :password)";
+            $sql = "INSERT INTO utilisateurs (nom, prenom, date_naissance, adresse, telephone, email, mot_de_passe, verification_token) 
+                    VALUES (:nom, :prenom, :date_naissance, :adresse, :telephone, :email, :password, :verification_token)";
             $stmt = $conn->prepare($sql);
 
             // Exécution de la requête
@@ -38,7 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ':adresse' => $adresse, 
                 ':telephone' => $telephone, 
                 ':email' => $email, 
-                ':password' => $password_hash
+                ':password' => $password_hash,
+                ':verification_token' => $token
             ])) {
                 // Récupérer l'ID du nouvel utilisateur
                 $user_id = $conn->lastInsertId();
@@ -53,6 +59,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Rediriger vers le profil
                 header("Location: profil.php");
                 exit();
+
+                // // Envoi de l'email de vérification
+                // sendVerificationEmail($email, $token);
+
+                // echo "<p style='color:green;'>Un email de vérification vous a été envoyé. Veuillez vérifier votre boîte de réception.</p>";
             }
         }
     }

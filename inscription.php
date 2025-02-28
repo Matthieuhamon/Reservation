@@ -62,7 +62,7 @@
                 </div>
             </form>
             <p class="text-center mt-3">
-                Déjà un compte ? <a href="login.php" class="text-decoration-none">Connectez-vous</a>
+                Déjà un compte ? <a href="connexion.php" class="text-decoration-none">Connectez-vous</a>
             </p>
         </div>
     </div>
