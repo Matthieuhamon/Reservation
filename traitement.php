@@ -56,9 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['nom'] = $nom;
                 $_SESSION['prenom'] = $prenom;
                 
-                // Rediriger vers le profil
-                header("Location: profil.php");
-                exit();
 
                 // Envoi de l'email de vérification
                 sendVerificationEmail($email, $token);
